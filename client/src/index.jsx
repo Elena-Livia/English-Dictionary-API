@@ -15,11 +15,13 @@ class App extends React.Component {
 
 render() {
 	return (
-		<div><App /> </div>
+		<div>
+		<App /> 
+		</div>
 		)
-}
+	}
 
-}
+};
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

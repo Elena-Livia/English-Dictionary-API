@@ -14,20 +14,19 @@ var app_id = "d9a7dc77 ";
 var app_key = "c716a15d34253218c1f2e0b6ecba5909";
 var dict = new Dictionary(app_id,app_key);
 
-app.post('/word', (req, res) =>{
-	console.log('req ',req.body)
-  	dict.find(req.body.word,function(error,data){
-     	if(error)
-    	 res.sendStatus(400)
-    	 res.send(data)
-   });
-});
+// app.post('/words', (req, res) =>{
+//   	dict.find(req.body.words,function(error,data){
+//      	if(error)
+//     	 res.sendStatus(400)
+//     	 res.send(data)
+//    });
+// });
 
 
-app.get('/*', (req, res) => {
-    res.sendFile(path.resolve(path.join(__dirname, '../client/dist/index.html')))
+// app.get('/*', (req, res) => {
+//     res.sendFile(path.resolve(path.join(__dirname, '../client/dist/index.html')))
 
-});
+// });
 
 app.listen(3000, function() {
   console.log('listening on port 3000!');
